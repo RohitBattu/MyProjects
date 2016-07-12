@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>
+Can you C-Sign in
+</title>
+<script language="Javascript">
+function fun()
+{
+var a=t1.fullname.value;
+var b=t1.emailid.value;
+var c=t1.contactno.value;
+var d=t1.password1.value;
+var e=t1.password2.value;
+
+if(a.length==0 || b.length==0 || c.length==0 || d.length==0||e.length==0)
+	{
+        alert("Please enter all the details in the fields" );
+		return false;
+     }
+ if(d.length<8)
+ {
+   alert("password must consist of minimum 8 characters");
+   return false;
+ }
+ if(d!=e){
+    alert("passwords donot match");
+   return false;
+}
+ return true;
+}
+</script>
+</head>
+
+
+<body background="mainpic2.jpg">
+<style type="text/css">
+marquee
+{
+  font-size:35;
+  color:blue;
+}
+</style>
+
+<marquee>
+Welcome to QUEST 2K16 proudly presents " Can You 'C' "
+</marquee>
+<br><br>
+<table align="center">
+<th colspan=2>
+Already Registered?? <a href="http://localhost/loginbefore.php">Click here to Login</a>
+</th>
+</table>
+
+<form method="post" action="http://localhost/registeration.php" id="t1">
+
+<table align="center">
+<tr>
+<td><font size=5>Full Name:</font></td>
+<td><input type="text" id="fullname" name="fullname"/></td>
+</tr>
+
+<tr>
+<td><font size=5>Email-ID</font></td>
+<td><input type="email" id="emailid" name="emailid"/></td>
+</tr>
+
+<tr>
+<td><font size=5>Contact No.</font></td>
+<td><input type="text" id="contactno" name="contactno"/></td>
+</tr>
+
+<tr>
+<td><font size=5>Password</font></td>
+<td><input type="password" id="password1" name="password"/></td>
+</tr>
+
+<tr>
+<td><font size=5>Retype Password</font></td>
+<td><input type="password" id="password2"/></td>
+</tr>
+
+<tr>
+<td>&nbsp</td>
+<td><input type="submit" value="Register" onclick="return fun()"/></td>
+</tr>
+</table>
+
+</form>
+
+<table align=center>
+<tr>
+<td><font size=5><b>Your phone number and password can be used for Login next time you visit</b></font> 
+</td>
+</tr>
+</table>
+
+
+
+
+</body>
+</html>
