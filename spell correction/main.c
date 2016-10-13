@@ -14,12 +14,12 @@ Node *root;
 
 Node* createNode()
 {
-   Node n;
+   Node *n=malloc(sizeof(Node));
    int i;
-   n.isEndOfWord = false;
+   n->isEndOfWord = false;
    for(i=0;i<ALPHABET_SIZE;i++)
-        n.next[i]=NULL;
-   return &n;
+        n->next[i]=NULL;
+   return n;
 }
 
 
